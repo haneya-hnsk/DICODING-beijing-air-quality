@@ -12,7 +12,7 @@ st.title("Beijing Air Quality")
 st.divider()
 
 def load_data():
-    df = pd.read_csv('stacked_data.csv')
+    df = pd.read_csv('https://haneya.space/data/stacked_data.csv')
     df['date'] = pd.to_datetime(df[['year', 'month', 'day']])
     return df
 
