@@ -87,7 +87,7 @@ avg_ax.set_title(f"Tren Kadar {selected_pollutant} per Jam", fontsize=14)
 avg_ax.set_xlabel('Jam (0-23)', fontsize=12)
 avg_ax.set_ylabel(f'Konsentrasi {selected_pollutant} (ug/m^3)', fontsize=12)
 avg_ax.set_xticks(range(0, 24))
-avg_ax.legend(loc='upper right', bbox_to_anchor=(1, 1), title='Stasiun')
+avg_ax.legend(loc='lower right', bbox_to_anchor=(1, 1), title='Stasiun')
 avg_ax.grid(True, alpha=0.3)
 st.pyplot(avg_fig, bbox_inches='tight')
 
