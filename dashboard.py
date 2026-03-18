@@ -5,7 +5,7 @@ import seaborn as sns
 
 st.set_page_config(
     page_title="Beijing Air Quality Dashboard",
-    layout="wide",
+    layout="centered",
 )
 
 st.title("Beijing Air Quality")
