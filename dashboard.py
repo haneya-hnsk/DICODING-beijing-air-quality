@@ -58,9 +58,9 @@ hourly_avg = main_df.groupby('hour')[selected_pollutant].mean()
 
 
 if start_date == end_date:
-    st.write(f"Menampilkan rata-rata konsentrasi per Jam **{selected_pollutant}** pada tanggal **{start_date}**.")
+    st.write(f"Konsentrasi per Jam **{selected_pollutant}** pada tanggal **{start_date}**.")
 else:
-    st.write(f"Menampilkan rata-rata konsentrasi per Jam **{selected_pollutant}** dari **{start_date}** hingga **{end_date}**.")
+    st.write(f"Konsentrasi per Jam **{selected_pollutant}** dari **{start_date}** hingga **{end_date}**.")
 
 avg_fig, avg_ax = plt.subplots(figsize=(12, 6))
 
@@ -72,7 +72,7 @@ if not selected_stations:
                 color="crimson", 
                 linewidth=3, 
                 label="Rata-rata Seluruh Stasiun")
-    st.write(f"Menampilkan rata-rata **seluruh stasiun** di Beijing.")
+    st.write(f"Menampilkan tren rata-rata **seluruh stasiun** di Beijing.")
 else:
     for station in selected_stations:
         station_data = main_df[main_df['station'] == station].groupby('hour')[selected_pollutant].mean()
